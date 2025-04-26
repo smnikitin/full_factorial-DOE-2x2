@@ -91,7 +91,7 @@ and updates the plots accordingly.
 
 ## 📸 Screenshots
 
-![demo1](https://github.com/smnikitin/face-detection/blob/main/img/Capture1.JPG) 
+![demo1](https://github.com/smnikitin/full_factorial-DOE-2x2/blob/main/img/Capture3.JPG) 
 
 ---
 
