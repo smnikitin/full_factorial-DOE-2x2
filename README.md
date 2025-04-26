@@ -13,8 +13,9 @@ Built with **Tkinter** for the GUI and **Matplotlib** for plotting.
 ## 📦 Requirements
 
 - Python 3.x
-- OpenCV (`opencv-python`)
+- Tkinter
 - NumPy
+- maytplot
 
 ## ✨ Features
 
@@ -51,9 +52,9 @@ No external libraries for the GUI — Tkinter is included with standard Python i
 Clone the repository and run the script:
 
 ```bash
-git clone https://github.com/yourusername/yourrepo.git
-cd yourrepo
-python factorial_doe_tool.py
+git clone https://github.com/smnikitin/full_factorial-DOE-2x2.git
+cd full_factorial-DOE-2x2
+python DOE_2x2.py
 ```
 
 A window will open where you can:
@@ -91,11 +92,12 @@ and updates the plots accordingly.
 ## 📂 Project Structure
 
 ```
-Real-Time-Face-Effects-with-OpenCV/
+full_factorial-DOE-2x2/
 │
-├── face_detection_effects.py   # Main application for face effects
-├── README.md                   # Project documentation
-└── LICENSE         # (Optional) 
+├── fDOE_2x2.py        # Main application 
+├── README.md        # Project documentation
+└── LICENSE        # (Optional)
+└── img        # Screenshots
 ```
 
 ---
@@ -132,7 +134,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🙌 Credits
 
-Created with 💻 using Python and OpenCV.  
+Created with 💻 using Python.  
 Inspired by tutorials and open-source contributions from the computer vision community.
 
 ---
