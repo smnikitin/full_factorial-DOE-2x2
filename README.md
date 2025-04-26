@@ -2,13 +2,19 @@
 
 A simple Python-based GUI tool for calculating the coefficients of a **2x2 full factorial Design of Experiments (DOE)**, generating the fitted model, and visualizing the results through:
 
-- A **Pareto chart** of effects,
-- **Y vs X1** and **Y vs X2** plots,
-- Interaction plots for combined effects.
+- A **Pareto chart** of the effects,
+- Main effect **Y vs X1** and **Y vs X2** plots,
+- Interaction plots for combined effects for Y.
 
 Built with **Tkinter** for the GUI and **Matplotlib** for plotting.
 
 ---
+
+## 📦 Requirements
+
+- Python 3.x
+- OpenCV (`opencv-python`)
+- NumPy
 
 ## ✨ Features
 
@@ -22,7 +28,7 @@ Y = b0 + b1*X1 + b2*X2 + b12*X1*X2
 - Visualize:
   - **Pareto Chart** (absolute effects),
   - **Main Effects** plots,
-  - **Interaction Lines** between factors.
+  - **Interaction** between factors.
 
 ---
 
@@ -76,13 +82,20 @@ Y = b0 + b1*X1 + b2*X2 + b12*X1*X2
 
 and updates the plots accordingly.
 
+## 📸 Screenshots
+
+![demo1](https://github.com/smnikitin/face-detection/blob/main/img/Capture1.JPG) 
+
 ---
 
 ## 📂 Project Structure
 
 ```
-factorial_doe_tool.py  # Main Python file containing all functionality
-README.md              # Project documentation
+Real-Time-Face-Effects-with-OpenCV/
+│
+├── face_detection_effects.py   # Main application for face effects
+├── README.md                   # Project documentation
+└── LICENSE         # (Optional) 
 ```
 
 ---
@@ -114,3 +127,17 @@ README.md              # Project documentation
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙌 Credits
+
+Created with 💻 using Python and OpenCV.  
+Inspired by tutorials and open-source contributions from the computer vision community.
+
+---
+
+## 🤝 Contributing
+
+Pull requests, feature suggestions, and issues are welcome! Let’s make this project even better together. ✨
+
