@@ -1,6 +1,6 @@
-# 📈 Two-Level Full Factorial DOE Tool
+# 📈 Two-Level Two - Factors Full Factorial simple DOE Tool
 
-A simple Python-based GUI tool for calculating the coefficients of a **two-level full factorial Design of Experiments (DOE)**, generating the fitted model, and visualizing the results through:
+A simple Python-based GUI tool for calculating the coefficients of a **2x2 full factorial Design of Experiments (DOE)**, generating the fitted model, and visualizing the results through:
 
 - A **Pareto chart** of effects,
 - **Y vs X1** and **Y vs X2** plots,
@@ -107,15 +107,10 @@ README.md              # Project documentation
 
 ## 🧑‍💻 Author
 
-- [Your Name](https://github.com/yourusername)
+- Sergey Nikitin
 
 ---
 
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-Would you also like me to show you how it could look if you want a slightly **shorter** or more **casual** version depending on your GitHub style? 🚀  
-(Also, I can make a simple badge section if you want it to look extra professional!) 🎨
