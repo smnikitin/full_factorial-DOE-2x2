@@ -1,71 +1,121 @@
-# Calculate Equation Coefficients
+# 📈 Two-Level Full Factorial DOE Tool
 
-This repository contains a Python application that calculates the coefficients of a linear equation based on user-provided Y values and plots the effects using Tkinter and Matplotlib.
+A simple Python-based GUI tool for calculating the coefficients of a **two-level full factorial Design of Experiments (DOE)**, generating the fitted model, and visualizing the results through:
 
-## Features
+- A **Pareto chart** of effects,
+- **Y vs X1** and **Y vs X2** plots,
+- Interaction plots for combined effects.
 
-- **Calculate Coefficients**: Computes the coefficients of the equation `Y = a + b*X1 + c*X2 + d*X1*X2` based on user input.
-- **Pareto Chart**: Plots a Pareto chart of the effects of the coefficients.
-- **Effect Plots**: Displays plots of `Y` vs `X1` and `Y` vs `X2`.
-- **Interactive GUI**: Provides an interactive GUI for input and visualization using Tkinter.
+Built with **Tkinter** for the GUI and **Matplotlib** for plotting.
 
-## Installation
+---
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/your-repo-name.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd your-repo-name
-    ```
-3. Install the required dependencies:
-    ```bash
-    pip install numpy matplotlib tkinter
-    ```
+## ✨ Features
 
-## Usage
+- Input custom **Y** values for a \(2^2\) factorial experiment.
+- Automatically **calculate the regression coefficients** for the model:
+  
+  \[
+  Y = b_0 + b_1X_1 + b_2X_2 + b_{12}X_1X_2
+  \]
+  
+- Visualize:
+  - **Pareto Chart** (absolute effects),
+  - **Main Effects** plots,
+  - **Interaction Lines** between factors.
 
-1. Run the application:
-    ```bash
-    python your_script_name.py
-    ```
-2. Enter the Y values in the provided input fields.
-3. Click the "Calculate" button to compute the coefficients and display the plots.
+---
 
-## Code Overview
+## 🛠️ Installation
 
-### `calculate_coefficients(Y, X1, X2)`
+Make sure you have Python 3 installed.
 
-Calculates the coefficients of the linear equation based on the input Y values and the given X1 and X2 values.
+Install the required Python libraries:
 
-### `plot_pareto_chart(coefficients, master)`
+```bash
+pip install numpy matplotlib
+```
 
-Plots a Pareto chart of the effects of the coefficients.
+No external libraries for the GUI — Tkinter is included with standard Python installations.
 
-### `plot_effects(coefficients)`
+---
 
-Displays plots of `Y` vs `X1` and `Y` vs `X2`.
+## 🚀 How to Run
 
-### `on_calculate()`
+Clone the repository and run the script:
 
-Handles the button click event to calculate the coefficients and update the plots.
+```bash
+git clone https://github.com/yourusername/yourrepo.git
+cd yourrepo
+python factorial_doe_tool.py
+```
 
-## GUI Layout
+A window will open where you can:
 
-- **Input Table**: Allows users to input Y values corresponding to given X1 and X2 values.
-- **Equation Display**: Shows the calculated equation.
-- **Pareto Chart**: Displays the Pareto chart of effects.
-- **Effect Plots**: Shows the plots of `Y` vs `X1` and `Y` vs `X2`.
+- Edit the Y values,
+- Click **"Calculate"** to update the model and plots.
 
-## Contributing
+---
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+## 📊 Example
 
-## License
+Given inputs:
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+| X1  | X2  | Y (output) |
+|:---:|:---:|:----------:|
+| -1  | -1  | 1          |
+|  1  | -1  | 2          |
+| -1  |  1  | 3          |
+|  1  |  1  | 8          |
 
-## Contact
+The tool computes and displays the fitted model:
 
-For any questions or suggestions, please contact [your-email@example.com](mailto
+```
+Y = b0 + b1*X1 + b2*X2 + b12*X1*X2
+```
+
+and updates the plots accordingly.
+
+---
+
+## 📂 Project Structure
+
+```
+factorial_doe_tool.py  # Main Python file containing all functionality
+README.md              # Project documentation
+```
+
+---
+
+## 🧠 Behind the Scenes
+
+- **Regression Calculation**: Least squares solution using NumPy.
+- **GUI**: Built with Tkinter.
+- **Plots**: Rendered dynamically using Matplotlib inside the Tkinter frames.
+- **Design**: Focused on clear interaction and real-time feedback.
+
+---
+
+## ⚡ Future Improvements
+
+- Extend to **\(2^k\)** factorial designs.
+- Add **confidence intervals** on effects.
+- Allow saving plots.
+- Add coded/uncoded factor conversion.
+
+---
+
+## 🧑‍💻 Author
+
+- [Your Name](https://github.com/yourusername)
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Would you also like me to show you how it could look if you want a slightly **shorter** or more **casual** version depending on your GitHub style? 🚀  
+(Also, I can make a simple badge section if you want it to look extra professional!) 🎨
