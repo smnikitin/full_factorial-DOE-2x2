@@ -1,10 +1,10 @@
-# 📈 Two-Level Two - Factors Full Factorial simple DOE Tool
+# 📈 Two-Level Two-Factor Full Factorial DOE Tool
 
-A simple Python-based GUI tool for calculating the coefficients of a **2x2 full factorial Design of Experiments (DOE)**, generating the fitted model, and visualizing the results through:
+A simple Python-based GUI tool for calculating the coefficients of a **2×2 full factorial Design of Experiments (DOE)**, generating the fitted model, and visualizing the results through:
 
-- A **Pareto chart** of the effects,
+- A **Pareto chart** of effects,
 - Main effect **Y vs X1** and **Y vs X2** plots,
-- Interaction plots for combined effects for Y.
+- **Interaction plots** for combined effects.
 
 Built with **Tkinter** for the GUI and **Matplotlib** for plotting.
 
@@ -13,31 +13,33 @@ Built with **Tkinter** for the GUI and **Matplotlib** for plotting.
 ## 📦 Requirements
 
 - Python 3.x
-- Tkinter
+- Tkinter (comes with Python)
 - NumPy
-- maytplot
+- Matplotlib
 
 ## ✨ Features
 
 - Input custom **Y** values for a \(2^2\) factorial experiment.
-- Automatically **calculate the regression coefficients** for the model:
-  
+- Automatically **calculate regression coefficients** for the model:
+
+```math
+Y = b0 + b1 * X1 + b2 * X2 + b12 * X1 * X2
 ```
-Y = b0 + b1*X1 + b2*X2 + b12*X1*X2
-```
-  
+
 - Visualize:
-  - **Pareto Chart** (absolute effects),
-  - **Main Effects** plots,
-  - **Interaction** between factors.
+  - **Pareto chart** of absolute effects,
+  - **Main effects** plots,
+  - **Interaction effects** plots.
 
 ---
 
-## ✨ Not inslcudes:
+## 🚫 Not Included
 
-- anova
-- model evalutation
-- clultaion of X peridciton for selcted Y
+- ANOVA analysis,
+- Model evaluation metrics (e.g., R², RMSE),
+- Prediction of **X** values for a given **Y**.
+
+---
 
 ## 🛠️ Installation
 
@@ -49,7 +51,7 @@ Install the required Python libraries:
 pip install numpy matplotlib
 ```
 
-No external libraries for the GUI — Tkinter is included with standard Python installations.
+No external libraries are needed for the GUI — **Tkinter** is included with standard Python distributions.
 
 ---
 
@@ -66,7 +68,7 @@ python DOE_2x2.py
 A window will open where you can:
 
 - Edit the Y values,
-- Click **"Calculate"** to update the model and plots.
+- Click **"Calculate"** to update the model and refresh the plots.
 
 ---
 
@@ -81,17 +83,19 @@ Given inputs:
 | -1  |  1  | 3          |
 |  1  |  1  | 8          |
 
-The tool computes and displays the fitted model:
+The tool calculates and displays the fitted model:
 
-```
-Y = b0 + b1*X1 + b2*X2 + b12*X1*X2
+```math
+Y = b0 + b1 * X1 + b2 * X2 + b12 * X1 * X2
 ```
 
-and updates the plots accordingly.
+and updates all plots accordingly.
+
+---
 
 ## 📸 Screenshots
 
-![demo1](https://github.com/smnikitin/full_factorial-DOE-2x2/blob/main/img/Capture3.JPG) 
+![demo1](https://github.com/smnikitin/full_factorial-DOE-2x2/blob/main/img/Capture3.JPG)
 
 ---
 
@@ -100,29 +104,29 @@ and updates the plots accordingly.
 ```
 full_factorial-DOE-2x2/
 │
-├── fDOE_2x2.py        # Main application 
-├── README.md        # Project documentation
-└── LICENSE        # (Optional)
-└── img        # Screenshots
+├── DOE_2x2.py        # Main application
+├── README.md         # Project documentation
+├── LICENSE           # (Optional)
+└── img/              # Screenshots folder
 ```
 
 ---
 
 ## 🧠 Behind the Scenes
 
-- **Regression Calculation**: Least squares solution using NumPy.
-- **GUI**: Built with Tkinter.
-- **Plots**: Rendered dynamically using Matplotlib inside the Tkinter frames.
-- **Design**: Focused on clear interaction and real-time feedback.
+- **Regression Calculation**: Solved via least squares using NumPy.
+- **GUI**: Built with Tkinter for a lightweight, native interface.
+- **Plots**: Generated dynamically using Matplotlib and embedded in the GUI.
+- **Design**: Focused on ease of use, clean visuals, and real-time interaction.
 
 ---
 
 ## ⚡ Future Improvements
 
-- Extend to **\(2^k\)** factorial designs.
-- Add **confidence intervals** on effects.
-- Allow saving plots.
-- Add coded/uncoded factor conversion.
+- Extend functionality to **\(2^k\)** full factorial designs.
+- Add **confidence intervals** and **error bars** for effects.
+- Allow saving plots as images.
+- Implement **coded/uncoded factor** conversions.
 
 ---
 
@@ -141,11 +145,11 @@ This project is licensed under the [MIT License](LICENSE).
 ## 🙌 Credits
 
 Created with 💻 using Python.  
-Inspired by tutorials and open-source contributions from the computer vision community.
+Inspired by open-source tutorials and the broader Python development community.
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests, feature suggestions, and issues are welcome! Let’s make this project even better together. ✨
-
+Pull requests, suggestions, and feedback are welcome!  
+Let’s make this project even better together. ✨
