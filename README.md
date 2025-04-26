@@ -33,6 +33,12 @@ Y = b0 + b1*X1 + b2*X2 + b12*X1*X2
 
 ---
 
+## ✨ Not inslcudes:
+
+- anova
+- model evalutation
+- clultaion of X peridciton for selcted Y
+
 ## 🛠️ Installation
 
 Make sure you have Python 3 installed.
