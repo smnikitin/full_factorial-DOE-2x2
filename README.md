@@ -15,9 +15,9 @@ Built with **Tkinter** for the GUI and **Matplotlib** for plotting.
 - Input custom **Y** values for a \(2^2\) factorial experiment.
 - Automatically **calculate the regression coefficients** for the model:
   
-  \[
-  Y = b_0 + b_1X_1 + b_2X_2 + b_{12}X_1X_2
-  \]
+```
+Y = b0 + b1*X1 + b2*X2 + b12*X1*X2
+```
   
 - Visualize:
   - **Pareto Chart** (absolute effects),
